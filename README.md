@@ -101,6 +101,13 @@ churn-api/
 
 **Base URL:** `https://customer-churn-prediction-xt7d.onrender.com`
 
+### `GET /`
+Returns a basic status message confirming the API is live.
+
+```json
+{ "message": "API is running" }
+```
+
 ### `GET /health`
 Returns server status.
 
