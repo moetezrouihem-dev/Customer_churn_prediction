@@ -1,4 +1,4 @@
-# ChurnRadar — Customer Churn Prediction
+# Customer Churn Prediction
 
 > A production-ready machine learning system that predicts telecom customer churn using a tuned Random Forest classifier, served via a REST API and an interactive web interface.
 
