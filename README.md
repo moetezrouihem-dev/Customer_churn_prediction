@@ -22,6 +22,7 @@ ChurnRadar predicts whether a telecom customer is likely to churn based on 19 be
 
 ## Features
 
+- **Model benchmarking** — Decision Tree, XGBoost, and Random Forest evaluated via 5-fold CV; Random Forest selected for best test set performance
 - **Tuned Random Forest** via `RandomizedSearchCV` with 5-fold cross-validation
 - **Class imbalance handling** using SMOTE (Synthetic Minority Oversampling)
 - **One-Hot Encoding** for all categorical features with `drop_first=True`
