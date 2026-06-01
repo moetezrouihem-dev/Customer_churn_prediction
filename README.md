@@ -34,13 +34,38 @@ ChurnRadar predicts whether a telecom customer is likely to churn based on 19 be
 
 ## Model Performance
 
+### Model Comparison (5-fold CV, scoring=accuracy)
+
+| Model | CV Accuracy |
+|---|---|
+| Decision Tree | 0.80 |
+| Random Forest | 0.84 |
+| XGBoost | 0.84 |
+
+Random Forest was selected over XGBoost despite identical CV accuracy — it achieved better F1 stability on the test set. Final tuning used `scoring=f1`.
+
+### Tuned Random Forest — Test Set Results
+
 | Metric | Default RF | Tuned RF |
 |---|---|---|
 | Accuracy | 0.79 | 0.79 |
-| F1 Score | 0.59 | 0.62 |
+| F1 Score (churn class) | 0.59 | 0.61 |
 | ROC-AUC | 0.83 | 0.84 |
 
-Tuning optimized for **F1 score** rather than accuracy — the correct choice for imbalanced classification where missing a churner is more costly than a false alarm.
+### Per-Class Breakdown (Tuned Model)
+
+| Class | Precision | Recall | F1 |
+|---|---|---|---|
+| No Churn (0) | 0.86 | 0.85 | 0.86 |
+| Churn (1) | 0.60 | 0.63 | 0.61 |
+
+### Confusion Matrix
+[[897  139]
+
+[158  215]]
+
+ **158** churners missed (false negatives — the costly error)
+Tuning optimized for **F1 score** rather than accuracy,the correct choice for imbalanced classification where missing a churner is more costly than a false alarm.
 
 ---
 
