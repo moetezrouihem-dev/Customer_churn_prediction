@@ -187,19 +187,6 @@ Raw CSV
 
 ---
 
-## Key Design Decisions
-
-**Why F1 over Accuracy?**
-The dataset is imbalanced (73/27). A model predicting "No Churn" for everyone achieves 73% accuracy while being completely useless. F1 penalizes this behavior and rewards catching actual churners.
-
-**Why One-Hot over Label Encoding?**
-Categorical features like `Contract` (Month-to-month / One year / Two year) have no meaningful order. Label Encoding would imply `Two year = 2 × Month-to-month`, which is mathematically incorrect for tree-based models and especially wrong for linear ones.
-
-**Why SMOTE over class_weight?**
-SMOTE generates synthetic minority samples, giving the model more diverse examples of churners to learn from. `class_weight='balanced'` is simpler but only reweights — it doesn't enrich the feature space.
-
----
-
 ## Author
 
 **Moetez Rouihem** — CS Engineering Student at ENSI, Tunis
