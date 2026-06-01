@@ -54,7 +54,6 @@ Tuning optimized for **F1 score** rather than accuracy — the correct choice fo
 | API | FastAPI + uvicorn |
 | Frontend | HTML / CSS / JavaScript |
 | Deployment | Render (API) + GitHub Pages (frontend) |
-| Serialization | joblib (compress=2) |
 
 ---
 
@@ -134,8 +133,8 @@ Predicts churn for a given customer profile.
 
 **1. Clone the repo**
 ```bash
-git clone https://github.com/YOURUSERNAME/churn-api.git
-cd churn-api
+git clone https://github.com/moetezrouihem-dev/Customer_churn_prediction.git
+cd Customer_churn_prediction
 ```
 
 **2. Install dependencies**
@@ -208,6 +207,3 @@ SMOTE generates synthetic minority samples, giving the model more diverse exampl
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github)](https://github.com/moetezrouihem-dev)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin)](https://linkedin.com/in/rouihem-moetez-10514b399/)
 
----
-
-*Built as part of a production ML portfolio — model training, API development, and full deployment from scratch.*
